@@ -274,10 +274,10 @@ function Fact({ fact, setFacts }) {
   return (
     <li className="fact">
       <p>
-        {isDisputed ? <span className="disputed">[⛔️ DISPUTED]</span> : null}
+        {isDisputed ? <span className="disputed">[😠 DISPUTED]</span> : null}
         {fact.text}
         <a className="source" href={fact.source} target="_blank">
-          (Source)
+          (Check source)
         </a>
       </p>
       <span
@@ -296,7 +296,7 @@ function Fact({ fact, setFacts }) {
           🤯 {fact.votesMindblowing}
         </button>
         <button onClick={() => handleVote("votesFalse")} disabled={isUpdating}>
-          ⛔️ {fact.votesFalse}
+          😠 {fact.votesFalse}
         </button>
       </div>
     </li>
