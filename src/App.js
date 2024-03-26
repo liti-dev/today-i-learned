@@ -115,12 +115,11 @@ function Header({ showForm, setShowForm }) {
 const CATEGORIES = [
   { name: "technology", color: "#3b82f6" },
   { name: "science", color: "#16a34a" },
-  { name: "finance", color: "#ef4444" },
-  { name: "society", color: "#eab308" },
+  { name: "finance", color: "#eab308" },
   { name: "entertainment", color: "#db2777" },
   { name: "health", color: "#14b8a6" },
   { name: "history", color: "#f97316" },
-  { name: "news", color: "#8b5cf6" },
+  { name: "others", color: "#8b5cf6" },
 ]
 
 function isValidHttpUrl(string) {
@@ -144,7 +143,7 @@ function NewFactForm({ setFacts, setShowForm }) {
   async function handleSubmit(e) {
     // 1. Prevent browser reload
     e.preventDefault()
-    console.log(text, source, category)
+    // console.log(text, source, category)
 
     // 2. Check if data is valid. If so, create a new fact
     if (text && isValidHttpUrl(source) && category && textLength <= 200) {
@@ -185,7 +184,7 @@ function NewFactForm({ setFacts, setShowForm }) {
     <form className="fact-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Share a fact with the world..."
+        placeholder="Share what I've learned with the world..."
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={isUploading}
