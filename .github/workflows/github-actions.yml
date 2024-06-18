@@ -1,7 +1,7 @@
 name: Visit URL
 on:
   schedule:
-    - cron: "*/2 * * * *" # Runs at 00:00 UTC every 2'
+    - cron: "0 0 */6 * *" # Runs at 00:00 UTC every 6 days
 
 jobs:
   cron_job:
