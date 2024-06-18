@@ -8,6 +8,9 @@ This fullstack app was built when I first learned to use **Supabase** (open-sour
 This app is a place for me to add short fun facts or things I learn during the day. People can react to each fact with "thumb up", "mind blown" and "disagree".    
 ## 🍔 Tech Stack: 
 React, Supabase, Postgres
+## Challenges & Solutions
+Supabase free tier deactivates my database if my project is inactive for a week. Hence, I had to manually reactivate it.  
+Now I'm adding a cron job to Github Workflow to automatically visit the website every 6 days.
 ## Future improvements:
 - More responsive UI
 - People can only react once to each fact
