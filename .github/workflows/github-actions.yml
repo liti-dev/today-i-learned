@@ -1,15 +1,12 @@
 name: Visit URL
 on:
   schedule:
-    - cron: '0 */2 * * *'  # Runs at 00:00 UTC every 6 days
-  
+    - cron: "0 0 */6 * *" # Runs at 00:00 UTC every 6 days
+
 jobs:
   cron_job:
     runs-on: ubuntu-latest
 
     steps:
-      
       # Add your job steps here
       - run: wget -O - https://today-tia-learned.netlify.app/ >/dev/null 2>&1
-          
-    
