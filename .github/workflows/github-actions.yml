@@ -1,12 +1,13 @@
-name: Visit URL
+name: CRON Jobs
+
 on:
   schedule:
-    - cron: "0 0 */6 * *" # Runs at 00:00 UTC every 6 days
+    - cron: "0 0 * * 2" # Runs at 00:00 on Tuesday" (see https://crontab.guru)
 
 jobs:
-  cron_job:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Add your job steps here
-      - run: wget -O - https://today-tia-learned.netlify.app/ >/dev/null 2>&1
+      - name: visit url
+        # Hit the url to keep the site active and avoid supabase deactivation
+        run: curl https://today-tia-learned.netlify.app/
